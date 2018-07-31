@@ -40,7 +40,7 @@ func CreateLogo(topText, bottomText string) (image.Image, error) {
 	maxWidth, _ = ctx.MeasureString(topText)
 
 	ctx.SetFontFace(bebasKaiFont)
-	newMaxWidth := drawStringWrapped(ctx, bottomText, xCenter, (float64(ctx.Height())/2)+ctx.FontHeight()+15, 0.5, 0.5, float64(ctx.Width())-30, 1, gg.AlignCenter)
+	newMaxWidth := drawStringWrapped(ctx, bottomText, xCenter, (float64(ctx.Height())/2)+ctx.FontHeight()+30, 0.5, 0.5, float64(ctx.Width())-30, 1, gg.AlignCenter)
 	if newMaxWidth > maxWidth {
 		maxWidth = newMaxWidth
 	}
