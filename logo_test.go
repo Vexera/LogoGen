@@ -10,7 +10,7 @@ import (
 
 func TestMeme(t *testing.T) {
 
-	img, err := vexeralogomeme.CreateLogo("B", "dabbot")
+	img, err := vexeralogomeme.CreateLogo("V", "vexera")
 	if err != nil {
 		t.Error(err)
 	}
