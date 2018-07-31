@@ -39,5 +39,5 @@ func main() {
 		png.Encode(w, image)
 	})
 
-	http.ListenAndServe(*listenPtr, nil)
+	panic(http.ListenAndServe(*listenPtr, nil))
 }
