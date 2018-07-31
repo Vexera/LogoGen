@@ -1,11 +1,11 @@
-package vexeralogomeme_test
+package LogoGen_test
 
 import (
 	"image/png"
 	"os"
 	"testing"
 
-	"github.com/SilverCory/vexeralogomeme"
+	"github.com/Vexera/LogoGen"
 )
 
 func TestMeme(t *testing.T) {

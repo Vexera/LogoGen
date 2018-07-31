@@ -1,4 +1,4 @@
-package vexeralogomeme
+package LogoGen
 
 import (
 	"image"

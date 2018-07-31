@@ -4,7 +4,7 @@ import (
 	"image/png"
 	"net/http"
 
-	"github.com/SilverCory/vexeralogomeme"
+	"github.com/Vexera/LogoGen"
 )
 
 func main() {
