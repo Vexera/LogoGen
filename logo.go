@@ -17,7 +17,7 @@ func init() {
 	var err error
 	backgroundImage, err = loadImage("assets/bg.png")
 	bebasKaiFont, err = gg.LoadFontFace("assets/BebasKai.ttf", 70)
-	craftismFont, err = gg.LoadFontFace("assets/D3Craftism.ttf", 200)
+	craftismFont, err = gg.LoadFontFace("assets/D3Craftism.ttf", 230)
 
 	if err != nil {
 		panic(err)
