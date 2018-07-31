@@ -25,7 +25,7 @@ func main() {
 			bottomText = []string{""}
 		}
 
-		image, err := vexeralogomeme.CreateLogo(topText[0], bottomText[0])
+		image, err := LogoGen.CreateLogo(topText[0], bottomText[0])
 		if err != nil {
 			w.WriteHeader(500)
 			return
