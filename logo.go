@@ -29,7 +29,7 @@ func CreateLogo(topText, bottomText string) (image.Image, error) {
 	xCenter := float64(ctx.Width()) / 2
 	ctx.SetFontFace(craftismFont)
 	ctx.SetHexColor("#FFF")
-	ctx.DrawStringAnchored(topText, xCenter, (float64(ctx.Height())/2)-(ctx.FontHeight()/2), 0.5, 0.5)
+	ctx.DrawStringAnchored(topText, xCenter, (float64(ctx.Height())/2)-(ctx.FontHeight()/2)-50, 0.5, 0.5)
 	ctx.SetFontFace(bebasKaiFont)
 	ctx.DrawStringWrapped(bottomText, xCenter, (float64(ctx.Height())/2)+ctx.FontHeight()+5, 0.5, 0.5, float64(ctx.Width())-30, 1, gg.AlignCenter)
 	return ctx.Image(), nil
