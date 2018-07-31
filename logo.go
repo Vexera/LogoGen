@@ -17,7 +17,7 @@ func init() {
 	var err error
 	backgroundImage, err = loadImage("assets/bg.png")
 	bebasKaiFont, err = gg.LoadFontFace("assets/BebasKai.ttf", 70)
-	craftismFont, err = gg.LoadFontFace("assets/D3Craftism.ttf", 230)
+	craftismFont, err = gg.LoadFontFace("assets/D3Craftism.ttf", 240)
 
 	if err != nil {
 		panic(err)
@@ -27,9 +27,9 @@ func init() {
 func CreateLogo(topText, bottomText string) (image.Image, error) {
 	ctx := gg.NewContextForImage(backgroundImage)
 	xCenter := float64(ctx.Width()) / 2
-	ctx.SetFontFace(craftismFont)
 	ctx.SetHexColor("#FFF")
-	ctx.DrawStringAnchored(topText, xCenter, (float64(ctx.Height())/2)-(ctx.FontHeight()/2)-50, 0.5, 0.5)
+	ctx.SetFontFace(craftismFont)
+	ctx.DrawStringAnchored(topText, xCenter, (float64(ctx.Height())/2)-(ctx.FontHeight()/2), 0.5, 0.5)
 	ctx.SetFontFace(bebasKaiFont)
 	ctx.DrawStringWrapped(bottomText, xCenter, (float64(ctx.Height())/2)+ctx.FontHeight()+5, 0.5, 0.5, float64(ctx.Width())-30, 1, gg.AlignCenter)
 	return ctx.Image(), nil
