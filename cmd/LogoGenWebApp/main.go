@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"image/png"
 	"net/http"
 
@@ -8,6 +9,10 @@ import (
 )
 
 func main() {
+
+	listenPtr := flag.String("listen", ":1337", "The address to listen on")
+	flag.Parse()
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != "GET" {
 			w.WriteHeader(400)
@@ -34,5 +39,5 @@ func main() {
 		png.Encode(w, image)
 	})
 
-	http.ListenAndServe(":1337", nil)
+	http.ListenAndServe(*listenPtr, nil)
 }
