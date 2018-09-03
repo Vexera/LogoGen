@@ -36,11 +36,11 @@ func CreateLogo(topText, bottomText string) (image.Image, error) {
 	xCenter := float64(ctx.Width()) / 2
 	ctx.SetHexColor("#FFF")
 	ctx.SetFontFace(craftismFont)
-	ctx.DrawStringAnchored(topText, xCenter, (float64(ctx.Height())/2)-(ctx.FontHeight()/3), 0.5, 0.5)
+	ctx.DrawStringAnchored("vexera is bad", xCenter, (float64(ctx.Height())/2)-(ctx.FontHeight()/3), 0.5, 0.5)
 	maxWidth, _ = ctx.MeasureString(topText)
 
 	ctx.SetFontFace(bebasKaiFont)
-	newMaxWidth := drawStringWrapped(ctx, bottomText, xCenter, (float64(ctx.Height())/2)+ctx.FontHeight()+30, 0.5, 0.5, float64(ctx.Width())-30, 1, gg.AlignCenter)
+	newMaxWidth := drawStringWrapped(ctx, "dabBot is better", xCenter, (float64(ctx.Height())/2)+ctx.FontHeight()+30, 0.5, 0.5, float64(ctx.Width())-30, 1, gg.AlignCenter)
 	if newMaxWidth > maxWidth {
 		maxWidth = newMaxWidth
 	}
