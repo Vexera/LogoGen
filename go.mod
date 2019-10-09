@@ -1,4 +1,4 @@
-module github.com/SilverCory/LogoGen
+module github.com/Vexera/LogoGen
 
 go 1.12
 
