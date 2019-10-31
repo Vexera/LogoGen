@@ -19,7 +19,7 @@ const TrimPadding = 100
 
 func init() {
 	var err error
-	backgroundImage, err = loadImage("assets/bg.png")
+	backgroundImage, err = loadImage("assets/gb.png")
 	bebasKaiFont, err = gg.LoadFontFace("assets/BebasKai.ttf", 85)
 	craftismFont, err = gg.LoadFontFace("assets/D3Craftism.ttf", 240)
 
